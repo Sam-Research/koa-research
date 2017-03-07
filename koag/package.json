@@ -1,0 +1,64 @@
+{
+  "name": "koag",
+  "version": "0.0.1",
+  "description": "koa; micro service; mongoose; koag",
+  "main": "app.js",
+  "author": "zysam",
+  "scripts": {
+    "dev": "NODE_ENV=development nodemon ./server/app.js",
+    "start": "NODE_ENV=production node dispatch.js",
+    "lint": "standard",
+    "test": "NODE_ENV=test mocha -t 5s -r should -r co-mocha ./test/server/**/*.test.js",
+    "pretest": "npm run lint",
+    "test-cov": "istanbul cover ./node_modules/.bin/_mocha -t 5000 -r should -r co-mocha -- ./test/server/**/*.test.js"
+  },
+  "dependencies": {
+    "accounting": "^0.4.1",
+    "bcryptjs": "^2.3.0",
+    "bluebird": "^3.4.6",
+    "cfork": "^1.5.1",
+    "co": "^4.6.0",
+    "co-gather": "0.0.1",
+    "co-retry": "^1.0.5",
+    "co-series": "^3.0.2",
+    "co-wait": "0.0.0",
+    "debug": "^2.2.0",
+    "graceful": "^1.0.1",
+    "ioredis": "^2.4.0",
+    "joi": "^9.1.0",
+    "koa": "^1.2.4",
+    "koa-bodyparser": "^2.2.0",
+    "koa-cors": "0.0.16",
+    "koa-morgan": "^0.4.0",
+    "koa-router": "^5.4.0",
+    "lodash": "^4.16.4",
+    "moment": "^2.15.1",
+    "moment-timezone": "^0.5.6",
+    "mongoose": "^4.6.4",
+    "request-debug": "^0.2.0",
+    "request-promise": "^3.0.0",
+    "thenify": "^3.2.1",
+    "timekeeper": "^0.1.1",
+    "validator": "^5.7.0",
+    "winston": "^2.3.0",
+    "winston-daily-rotate-file": "^1.3.1"
+  },
+  "devDependencies": {
+    "co-mocha": "^1.1.2",
+    "co-supertest": "0.0.10",
+    "istanbul": "0.4.1",
+    "nock": "^8.0.0",
+    "mocha": "^2.3.4",
+    "should": "^8.0.1",
+    "standard": "^7.1.2",
+    "supertest": "^1.0.1"
+  },
+  "standard": {
+    "ignore": [],
+    "global": [
+      "describe",
+      "it"
+    ]
+  },
+  "license": "MIT"
+}
